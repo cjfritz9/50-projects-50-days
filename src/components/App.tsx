@@ -96,7 +96,15 @@ const App: React.FC = () => {
             </button>
           </>
         )
-      ) : null}
+      ) : (
+          <button
+            id='app-home'
+          className='app-nav-btn'
+          onClick={() => navigate('components/1')}
+        >
+          Components
+        </button>
+      )}
     </div>
   );
 };

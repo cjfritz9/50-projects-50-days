@@ -1,0 +1,30 @@
+
+.container-sb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  height: 100%;
+}
+
+.btn-sb {
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-sb:hover {
+  opacity: 0.9;
+}
+
+.btn-sb:focus {
+  outline: none;
+}

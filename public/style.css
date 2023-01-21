@@ -54,6 +54,10 @@ body {
   color: white;
 }
 
+#app-home {
+  left: 25%;
+}
+
 #app-back {
   left: 10px;
 }

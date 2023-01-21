@@ -12,19 +12,14 @@ const ProgressSteps: React.FC = () => {
   let circles: HTMLCollectionOf<HTMLDivElement>;
 
   const nextHandler = () => {
-    console.log(prev);
     circles[active].classList.add('active');
     setActive(active + 1);
   };
 
   const prevHandler = () => {
-    console.log('test');
-
     circles[active - 1].classList.remove('active');
     setActive(active - 1);
   };
-
-  console.log('Current: ', active);
 
   React.useEffect(() => {
     progress = document.getElementById('progress')! as HTMLDivElement;
@@ -65,10 +60,10 @@ const ProgressSteps: React.FC = () => {
         })}
       </div>
       <div className='btn-container-ps'>
-        <button onClick={prevHandler.bind(this)} className='btn' id='prev'>
+        <button onClick={prevHandler.bind(this)} className='btn-ps' id='prev'>
           Prev
         </button>
-        <button onClick={nextHandler.bind(this)} className='btn' id='next'>
+        <button onClick={nextHandler.bind(this)} className='btn-ps' id='next'>
           Next
         </button>
       </div>

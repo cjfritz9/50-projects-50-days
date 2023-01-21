@@ -5,6 +5,7 @@ import BlurryLoading from './blurry-loading/BlurryLoading';
 import DadJokes from './dad-jokes-generator/DadJokes';
 import Cards from './expanding-cards/Cards';
 import Search from './hidden-search-widget/Search';
+import KeyCodes from './key-codes/KeyCodes';
 import ProgressSteps from './progress-steps/ProgressSteps';
 import RotatingNavigation from './rotating-navigation/RotatingNavigation';
 import Boxes from './scroll-animation/Boxes';
@@ -12,7 +13,7 @@ import SoundBoard from './soundboard/SoundBoard';
 import SplitLanding from './split-landing/SplitLanding';
 
 const App: React.FC = () => {
-  const numOfComponents = 10;
+  const numOfComponents = 11;
   const navigate = Router.useNavigate();
 
   const navHandler = (button: string): void => {
@@ -21,16 +22,12 @@ const App: React.FC = () => {
     let pageIsdoubleDigit = false;
 
     if (url.slice(-3).charAt(0) === '/') {
-      console.log(url.slice(-3).charAt(0));
       pageIsdoubleDigit = true;
     }
-    console.log(pageIsdoubleDigit);
-    console.log(url.slice(-1));
 
     if (!pageIsdoubleDigit) {
       if (button == 'next') {
         targetPage = (+url.slice(-1) + 1).toString();
-        console.log(targetPage);
       } else {
         targetPage = (+url.slice(-1) - 1).toString();
       }
@@ -41,7 +38,6 @@ const App: React.FC = () => {
         targetPage = (+url.slice(-2) - 1).toString();
       }
     }
-    console.log(targetPage);
     navigate(`components/${targetPage}`);
   };
 
@@ -58,6 +54,7 @@ const App: React.FC = () => {
         <Router.Route path='/components/8' element={<Boxes />} />
         <Router.Route path='/components/9' element={<SoundBoard />} />
         <Router.Route path='/components/10' element={<SplitLanding />} />
+        <Router.Route path='/components/11' element={<KeyCodes />} />
       </Router.Routes>
       {window.location.href.slice(-15).includes('components') ? (
         window.location.href.length &&

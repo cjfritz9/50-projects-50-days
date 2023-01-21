@@ -9,8 +9,6 @@ const Menu: React.FC<MenuProps> = ({ setShowNav }) => {
   const [menuOpen, setMenuOpen] = React.useState<boolean>(false);
 
   const menuHandler = () => {
-    console.log('menu open: ', menuOpen);
-
     if (menuOpen) {
       setShowNav(false);
     } else {

@@ -21,7 +21,7 @@ const AnimatedForm: React.FC = () => {
   }, []);
 
   return (
-    <div className='component-container'>
+    <div className='component-container af-wrap'>
       <h1 id='project-title'>Animated Form</h1>
       <div className='container-af'>
         <h2>Login</h2>

@@ -12,7 +12,7 @@ import SoundBoard from './soundboard/SoundBoard';
 import SplitLanding from './split-landing/SplitLanding';
 
 const App: React.FC = () => {
-  const numOfComponents = 11;
+  const numOfComponents = 10;
   const navigate = Router.useNavigate();
 
   const navHandler = (button: string): void => {
@@ -20,16 +20,17 @@ const App: React.FC = () => {
     let targetPage: string;
     let pageIsdoubleDigit = false;
 
-    if (url.slice(-3).charAt(1) === '/') {
+    if (url.slice(-3).charAt(0) === '/') {
+      console.log(url.slice(-3).charAt(0));
       pageIsdoubleDigit = true;
     }
-    console.log(pageIsdoubleDigit)
-    console.log(url.slice(-1))
+    console.log(pageIsdoubleDigit);
+    console.log(url.slice(-1));
 
     if (!pageIsdoubleDigit) {
       if (button == 'next') {
         targetPage = (+url.slice(-1) + 1).toString();
-        console.log(targetPage)
+        console.log(targetPage);
       } else {
         targetPage = (+url.slice(-1) - 1).toString();
       }
@@ -40,7 +41,7 @@ const App: React.FC = () => {
         targetPage = (+url.slice(-2) - 1).toString();
       }
     }
-    console.log(targetPage)
+    console.log(targetPage);
     navigate(`components/${targetPage}`);
   };
 
@@ -58,26 +59,9 @@ const App: React.FC = () => {
         <Router.Route path='/components/9' element={<SoundBoard />} />
         <Router.Route path='/components/10' element={<SplitLanding />} />
       </Router.Routes>
-      {window.location.href.length == 34 &&
-      window.location.href.slice(-1) == '1' ? (
-        <button
-          id='app-next'
-          className='app-nav-btn'
-          onClick={() => navHandler('next')}
-        >
-          Next
-        </button>
-      ) : window.location.href.slice(-2) == numOfComponents.toString() ||
-        window.location.href.slice(-1) == numOfComponents.toString() ? (
-        <button
-          id='app-back'
-          className='app-nav-btn'
-          onClick={() => navHandler('back')}
-        >
-          Back
-        </button>
-      ) : (
-        <>
+      {window.location.href.slice(-15).includes('components') ? (
+        window.location.href.length &&
+        window.location.href.slice(-2) == '/1' ? (
           <button
             id='app-next'
             className='app-nav-btn'
@@ -85,6 +69,8 @@ const App: React.FC = () => {
           >
             Next
           </button>
+        ) : window.location.href.slice(-2) == numOfComponents.toString() ||
+          window.location.href.slice(-1) == numOfComponents.toString() ? (
           <button
             id='app-back'
             className='app-nav-btn'
@@ -92,8 +78,25 @@ const App: React.FC = () => {
           >
             Back
           </button>
-        </>
-      )}
+        ) : (
+          <>
+            <button
+              id='app-next'
+              className='app-nav-btn'
+              onClick={() => navHandler('next')}
+            >
+              Next
+            </button>
+            <button
+              id='app-back'
+              className='app-nav-btn'
+              onClick={() => navHandler('back')}
+            >
+              Back
+            </button>
+          </>
+        )
+      ) : null}
     </div>
   );
 };

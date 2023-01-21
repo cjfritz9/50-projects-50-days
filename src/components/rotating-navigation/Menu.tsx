@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './RotatingNavigation.css';
 
 interface MenuProps {
   setShowNav: Function;

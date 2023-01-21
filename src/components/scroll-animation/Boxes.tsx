@@ -9,7 +9,7 @@ const Boxes: React.FC = () => {
         'box-sa'
       )! as HTMLCollectionOf<HTMLDivElement>
     );
-    const triggerBottom = window.innerHeight * 0.8;
+    const triggerBottom = window.innerHeight * 0.7;
 
     boxes.forEach((box) => {
       if (triggerBottom > 1000) {

@@ -27,7 +27,7 @@ const BlurryLoading: React.FC = () => {
       image.style.filter = `blur(${blurRef.current}px)`;
     };
     let interval = setInterval(blurring, 30);
-  }, []);
+  }, []); 
 
   return (
     <div className='component-container'>

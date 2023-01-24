@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as React from 'react';
+import * as Chakra from '@chakra-ui/react'
 import './DadJokes.css';
 
 const DadJokes: React.FC = () => {
@@ -40,7 +41,7 @@ const DadJokes: React.FC = () => {
           <div className='joke'>{error}</div>
         ) : (
           <div id='joke' className='joke'>
-            {joke ? joke : null}
+            {joke ? joke : <Chakra.Spinner/>}
           </div>
         )}
         {error ? (

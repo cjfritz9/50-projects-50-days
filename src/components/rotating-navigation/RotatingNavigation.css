@@ -4,7 +4,7 @@
   background-color: azure;
   transform-origin: top left;
   transition: transform 0.5s linear;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .navmenu-container {
-  position: fixed;
+  position: relative;
   top: -50px;
   left: -50px;
 }
@@ -38,15 +38,15 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   transition: transform 0.5s linear;
 }
 
 .navmenu button {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 60%;
   height: 50px;
   background: transparent;
   border: 0;
@@ -55,11 +55,12 @@
 }
 
 .navmenu button#open {
-  left: 50%;
+  left: 60%;
 }
 
 .navmenu button#close {
-  top: 50%;
+  left: 60%;
+  top: 60%;
   transform: rotate(90deg);
   transform-origin: top left;
 }
@@ -89,7 +90,7 @@ nav ul li {
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  color: white;
+  color: black;
   margin: 30px 0;
   transform: translateX(-100%);
   transition: transform 0.4s ease-in;
@@ -122,6 +123,7 @@ nav a {
 }
 
 .content h1 {
+  font-size: 50px;
   margin: 0;
 }
 

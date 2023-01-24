@@ -8,7 +8,7 @@ const RotatingNavigation: React.FC = () => {
   const [showNav, setShowNav] = React.useState<boolean>(false);
 
   return (
-    <div className='component-container'>
+    <div className='component-container' style={{ height: 'fit-content' }}>
       <div id='menu' className={`container${showNav ? ' show-nav' : ''}`}>
         <Menu setShowNav={setShowNav} />
         <Blog />

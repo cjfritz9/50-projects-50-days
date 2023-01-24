@@ -63,12 +63,12 @@
   background-color: var(--left-bg-color);
 }
 
-.split.left .btn:hover {
+.split.left .btn-sl:hover {
   background-color: var(--left-btn-hover-color);
   border-color: var(--left-btn-hover-color);
 }
 
-.split.right .btn:hover {
+.split.right .btn-sl:hover {
   background-color: var(--right-btn-hover-color);
   border-color: var(--right-btn-hover-color);
 }
@@ -111,7 +111,7 @@
   transition: all var(--speed) ease-in-out;
 }
 
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   h1 {
     font-size: 2rem;
     top: 30%;

@@ -4,6 +4,8 @@ import AnimatedForm from './animated-form/AnimatedForm';
 import BlurryLoading from './blurry-loading/BlurryLoading';
 import DadJokes from './dad-jokes-generator/DadJokes';
 import Cards from './expanding-cards/Cards';
+import FAQCollapse from './faq-collapse/FAQCollapse';
+import Header from './Header';
 import Search from './hidden-search-widget/Search';
 import KeyCodes from './key-codes/KeyCodes';
 import ProgressSteps from './progress-steps/ProgressSteps';
@@ -13,36 +15,9 @@ import SoundBoard from './soundboard/SoundBoard';
 import SplitLanding from './split-landing/SplitLanding';
 
 const App: React.FC = () => {
-  const numOfComponents = 11;
-  const navigate = Router.useNavigate();
-
-  const navHandler = (button: string): void => {
-    const url = window.location.href;
-    let targetPage: string;
-    let pageIsdoubleDigit = false;
-
-    if (url.slice(-3).charAt(0) === '/') {
-      pageIsdoubleDigit = true;
-    }
-
-    if (!pageIsdoubleDigit) {
-      if (button == 'next') {
-        targetPage = (+url.slice(-1) + 1).toString();
-      } else {
-        targetPage = (+url.slice(-1) - 1).toString();
-      }
-    } else {
-      if (button == 'next') {
-        targetPage = (+url.slice(-2) + 1).toString();
-      } else {
-        targetPage = (+url.slice(-2) - 1).toString();
-      }
-    }
-    navigate(`components/${targetPage}`);
-  };
-
   return (
     <div id='App' className='App'>
+      <Header />
       <Router.Routes>
         <Router.Route path='/components/1' element={<AnimatedForm />} />
         <Router.Route path='/components/2' element={<BlurryLoading />} />
@@ -55,53 +30,8 @@ const App: React.FC = () => {
         <Router.Route path='/components/9' element={<SoundBoard />} />
         <Router.Route path='/components/10' element={<SplitLanding />} />
         <Router.Route path='/components/11' element={<KeyCodes />} />
+        <Router.Route path='/components/12' element={<FAQCollapse />} />
       </Router.Routes>
-      {window.location.href.slice(-15).includes('components') ? (
-        window.location.href.length &&
-        window.location.href.slice(-2) == '/1' ? (
-          <button
-            id='app-next'
-            className='app-nav-btn'
-            onClick={() => navHandler('next')}
-          >
-            Next
-          </button>
-        ) : window.location.href.slice(-2) == numOfComponents.toString() ||
-          window.location.href.slice(-1) == numOfComponents.toString() ? (
-          <button
-            id='app-back'
-            className='app-nav-btn'
-            onClick={() => navHandler('back')}
-          >
-            Back
-          </button>
-        ) : (
-          <>
-            <button
-              id='app-next'
-              className='app-nav-btn'
-              onClick={() => navHandler('next')}
-            >
-              Next
-            </button>
-            <button
-              id='app-back'
-              className='app-nav-btn'
-              onClick={() => navHandler('back')}
-            >
-              Back
-            </button>
-          </>
-        )
-      ) : (
-          <button
-            id='app-home'
-          className='app-nav-btn'
-          onClick={() => navigate('components/1')}
-        >
-          Components
-        </button>
-      )}
     </div>
   );
 };

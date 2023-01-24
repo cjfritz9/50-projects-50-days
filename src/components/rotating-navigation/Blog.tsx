@@ -23,6 +23,19 @@ const Blog: React.FC = () => {
         voluptas, quae, vel sequi aspernatur officiis sapiente obcaecati alias!
         Culpa animi deleniti rerum mollitia saepe at, ipsam vitae modi.
       </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet totam
+        dolore sapiente sed ab blanditiis repudiandae, recusandae sequi expedita
+        nobis quisquam magni dolorem debitis, accusamus voluptatum. Rerum, aut
+        exercitationem accusantium tenetur reprehenderit inventore mollitia,
+        quod animi sunt nesciunt quae temporibus doloribus vitae quisquam rem
+        assumenda repudiandae? Nostrum tempora, omnis unde et sint dolores nulla
+        ad doloremque rem. Voluptates, maiores repellat nam perferendis
+        voluptatibus sequi at nulla. Deserunt nihil nam enim, omnis officia
+        sequi commodi voluptatibus magnam? Totam saepe, beatae quo fugit
+        voluptas, quae, vel sequi aspernatur officiis sapiente obcaecati alias!
+        Culpa animi deleniti rerum mollitia saepe at, ipsam vitae modi.
+      </p>
     </main>
   );
 };

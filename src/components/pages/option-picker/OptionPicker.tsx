@@ -6,6 +6,7 @@ import Title from '../../Title';
 const OptionPicker: React.FC = () => {
   const [newTag, setNewTag] = React.useState<HTMLSpanElement | null>(null);
   const firstInputRef = React.useRef(true);
+  const tagRef = React.useRef<HTMLSpanElement>();
 
   const randomSelect = () => {
     const iterations = 30;
@@ -48,7 +49,6 @@ const OptionPicker: React.FC = () => {
         });
         //@ts-ignore
         highlightTag(finalChoice);
-        // @ts-ignore
         document.getElementById('restart-btn')!.style.display = 'block';
       }, 150);
     }, iterations * 100);
@@ -91,10 +91,16 @@ const OptionPicker: React.FC = () => {
   };
 
   const createTags = (textInput: string) => {
+    console.log('test');
+
     const tagContainer = document.getElementById(
       'tag-container'
     )! as HTMLDivElement;
-    const tagNode = tagContainer.firstChild as HTMLSpanElement;
+    if (!tagRef.current) {
+      tagRef.current = tagContainer.firstChild as HTMLSpanElement;
+    }
+    const tagNode = tagRef.current;
+    console.log(tagRef.current);
     const textArea = document.getElementById(
       'text-area'
     )! as HTMLTextAreaElement;
@@ -129,6 +135,8 @@ const OptionPicker: React.FC = () => {
     document.getElementById('tag-container')!.replaceChildren();
     document.getElementById('restart-btn')!.style.display = 'none';
     document.getElementById('text-area')!.focus();
+    firstInputRef.current = true;
+    setNewTag(null);
   };
 
   React.useEffect(() => {
@@ -136,7 +144,6 @@ const OptionPicker: React.FC = () => {
     if (newTag) {
       if (firstInputRef.current) {
         document.getElementById('tag-container')!.replaceChildren();
-        console.log('here');
         firstInputRef.current = false;
       }
       document.getElementById('tag-container')?.appendChild(newTag!);

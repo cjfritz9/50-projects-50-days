@@ -58,23 +58,25 @@ const OptionPicker: React.FC = () => {
     const tags = document.getElementById('tag-container')!
       .children as HTMLCollectionOf<HTMLSpanElement>;
 
-    let originalTags = 0;
-    Array.from(tags).forEach((tag) => {
-      if (tag.innerHTML === 'Options' || 'Appear' || 'Here') {
-        originalTags++;
-      }
-    });
-    if (originalTags === 3) {
-      document.getElementById('tag-container')!.replaceChildren(tags[0]);
-      const textArea = document.getElementById(
-        'text-area'
-      )! as HTMLTextAreaElement;
-      textArea.disabled = false;
-      tags[0].innerHTML = 'Enter your choices first!';
-      tags[0].style.boxShadow = 'inset 0 0 0px 1px red';
-      tags[0].style.color = 'red';
-      return false;
-    }
+    // let originalTags = 0;
+    // Array.from(tags).forEach((tag) => {
+    //   if (tag.innerHTML === 'Options' || 'Appear' || 'Here') {
+    //     originalTags++;
+    //     console.log(originalTags)
+    //   }
+    // });
+
+    // if (originalTags === 3) {
+    //   document.getElementById('tag-container')!.replaceChildren(tags[0]);
+    //   const textArea = document.getElementById(
+    //     'text-area'
+    //   )! as HTMLTextAreaElement;
+    //   textArea.disabled = false;
+    //   tags[0].innerHTML = 'Enter your choices first!';
+    //   tags[0].style.boxShadow = 'inset 0 0 0px 1px red';
+    //   tags[0].style.color = 'red';
+    //   return false;
+    // }
 
     return tags[Math.floor(Math.random() * tags.length)];
   };

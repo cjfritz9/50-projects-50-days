@@ -3,26 +3,32 @@ import * as Chakra from '@chakra-ui/react';
 import * as RI from 'react-icons/bs';
 
 const OptionPicker: React.FC = () => {
-  const [userInput, setUserInput] = React.useState<string>('')
+  const [userInput, setUserInput] = React.useState<string>('');
 
-  const textArea = document.getElementById(
-    'text-area'
-  )! as HTMLTextAreaElement;
+  const submitHandler = () => {
+    const textArea = document.getElementById(
+      'text-area'
+    )! as HTMLTextAreaElement;
 
-  const tagContainer = document.getElementById(
-    'tags-container'
-  )! as HTMLDivElement;
-
-  // const submitHandler = (options: string) => {
-  //   const tagEle = tagContainer.firstChild;
-
-  // };
+    const tagContainer = document.getElementById(
+      'tag-container'
+    )! as HTMLDivElement;
+    const tagEle = tagContainer.firstChild!;
+    const tagCopy = tagEle! as HTMLSpanElement;
+    const colorSchemes = ['black', 'orange', 'pink', 'red'];
+    tagCopy.style.color = `${
+      colorSchemes[Math.floor(Math.random() * colorSchemes.length)]
+    }`;
+    tagCopy.style.boxShadow = `inset 0 0 0px 1 px ${
+      colorSchemes[Math.floor(Math.random() * colorSchemes.length)]
+    }`;
+    tagContainer.replaceChildren(tagCopy);
+    console.log(tagEle);
+  };
 
   React.useEffect(() => {
-    if (textArea) {
-      textArea.focus()
-    }
-  }, [textArea])
+    document.getElementById('text-area')?.focus();
+  }, []);
 
   return (
     <Chakra.Box
@@ -93,6 +99,7 @@ const OptionPicker: React.FC = () => {
             Here
           </Chakra.Badge>
         </Chakra.Flex>
+        <Chakra.Button onClick={() => submitHandler()}>Helper</Chakra.Button>
       </Chakra.Box>
     </Chakra.Box>
   );

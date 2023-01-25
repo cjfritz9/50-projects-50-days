@@ -28,7 +28,6 @@ const OptionPicker: React.FC = () => {
       const textArea = document.getElementById(
         'text-area'
       )! as HTMLTextAreaElement;
-      textArea.disabled = false;
       textArea.value = '';
       textArea.focus();
 
@@ -58,26 +57,6 @@ const OptionPicker: React.FC = () => {
     const tags = document.getElementById('tag-container')!
       .children as HTMLCollectionOf<HTMLSpanElement>;
 
-    // let originalTags = 0;
-    // Array.from(tags).forEach((tag) => {
-    //   if (tag.innerHTML === 'Options' || 'Appear' || 'Here') {
-    //     originalTags++;
-    //     console.log(originalTags)
-    //   }
-    // });
-
-    // if (originalTags === 3) {
-    //   document.getElementById('tag-container')!.replaceChildren(tags[0]);
-    //   const textArea = document.getElementById(
-    //     'text-area'
-    //   )! as HTMLTextAreaElement;
-    //   textArea.disabled = false;
-    //   tags[0].innerHTML = 'Enter your choices first!';
-    //   tags[0].style.boxShadow = 'inset 0 0 0px 1px red';
-    //   tags[0].style.color = 'red';
-    //   return false;
-    // }
-
     return tags[Math.floor(Math.random() * tags.length)];
   };
 
@@ -93,8 +72,6 @@ const OptionPicker: React.FC = () => {
   };
 
   const createTags = (textInput: string) => {
-    console.log('test');
-
     const tagContainer = document.getElementById(
       'tag-container'
     )! as HTMLDivElement;
@@ -102,7 +79,6 @@ const OptionPicker: React.FC = () => {
       tagRef.current = tagContainer.firstChild as HTMLSpanElement;
     }
     const tagNode = tagRef.current;
-    console.log(tagRef.current);
     const textArea = document.getElementById(
       'text-area'
     )! as HTMLTextAreaElement;
@@ -123,9 +99,39 @@ const OptionPicker: React.FC = () => {
       const textArea = document.getElementById(
         'text-area'
       )! as HTMLTextAreaElement;
+
       if (textArea.value.length) {
         createTags(textArea.value + ',');
       }
+      // let originalTags = 0;
+      // const tags = document.getElementById('tag-container')!
+      //   .children as HTMLCollectionOf<HTMLSpanElement>;
+      // Array.from(tags).forEach((tag) => {
+      //   console.log(tag.innerHTML, originalTags);
+      //   if (
+      //     (tags.length === 3 && tag.textContent === 'Options') ||
+      //     'Appear' ||
+      //     'Here'
+      //   ) {
+      //     originalTags++;
+      //   }
+      //   if (tag.innerHTML === 'Invalid Choices') {
+      //     tag.remove();
+      //   }
+      // });
+      // console.log(tags.length);
+
+      // if (tags.length <= 1 || originalTags === 3) {
+      //   document.getElementById('tag-container')!.replaceChildren(tags[0]);
+      //   const textArea = document.getElementById(
+      //     'text-area'
+      //   )! as HTMLTextAreaElement;
+      //   textArea.disabled = false;
+      //   tags[0].innerHTML = 'Invalid Choices';
+      //   tags[0].style.boxShadow = 'inset 0 0 0px 1px red';
+      //   tags[0].style.color = 'red';
+      //   return;
+      // }
       setTimeout(() => {
         textArea.disabled = true;
         randomSelect();
@@ -136,9 +142,13 @@ const OptionPicker: React.FC = () => {
   const restart = () => {
     document.getElementById('tag-container')!.replaceChildren();
     document.getElementById('restart-btn')!.style.display = 'none';
-    document.getElementById('text-area')!.focus();
+    const textArea = document.getElementById(
+      'text-area'
+    )! as HTMLTextAreaElement;
     firstInputRef.current = true;
     setNewTag(null);
+    textArea.disabled = false;
+    textArea.focus();
   };
 
   React.useEffect(() => {

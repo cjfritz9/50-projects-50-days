@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 const Header: React.FC = () => {
   const [isBackDisabled, setIsBackDisabled] = React.useState<boolean>(false);
   const [isNextDisabled, setIsNextDisabled] = React.useState<boolean>(false);
-
-  const numOfComponents = 12;
   const navigate = useNavigate();
+
+  const numOfComponents = 13;
 
   const navHandler = (button: string): void => {
     const url = window.location.href;
@@ -58,6 +58,7 @@ const Header: React.FC = () => {
       justifyContent='space-between'
       alignItems='center'
       p='1rem 3rem'
+      w='100vw'
       zIndex={1}
     >
       <Chakra.Button

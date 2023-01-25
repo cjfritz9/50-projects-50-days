@@ -8,6 +8,7 @@ import FAQCollapse from './faq-collapse/FAQCollapse';
 import Header from './Header';
 import Search from './hidden-search-widget/Search';
 import KeyCodes from './key-codes/KeyCodes';
+import OptionPicker from './option-picker/OptionPicker';
 import ProgressSteps from './progress-steps/ProgressSteps';
 import RotatingNavigation from './rotating-navigation/RotatingNavigation';
 import Boxes from './scroll-animation/Boxes';
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <Router.Route path='/components/10' element={<SplitLanding />} />
         <Router.Route path='/components/11' element={<KeyCodes />} />
         <Router.Route path='/components/12' element={<FAQCollapse />} />
+        <Router.Route path='/components/13' element={<OptionPicker />} />
       </Router.Routes>
     </div>
   );

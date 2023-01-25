@@ -19,7 +19,7 @@ const App: React.FC = () => {
   const navigate = Router.useNavigate()
 
   React.useEffect(() => {
-    if (!window.location.href.slice(-20).includes('components')) {
+    if (!window.location.href.slice(-13).includes('components')) {
       navigate('/components/1')
     }
   }, [])

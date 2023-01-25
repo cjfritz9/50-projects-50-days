@@ -1,35 +1,116 @@
 import * as React from 'react';
 import * as Chakra from '@chakra-ui/react';
-import * as RI from 'react-icons/bs';
+import { randomThemeSelector } from '../../../utils/helpers';
+import Title from '../../Title';
 
 const OptionPicker: React.FC = () => {
-  const [userInput, setUserInput] = React.useState<string>('');
+  const [newTag, setNewTag] = React.useState<HTMLSpanElement | null>(null);
+  const firstInputRef = React.useRef(true);
 
-  const submitHandler = () => {
-    const textArea = document.getElementById(
-      'text-area'
-    )! as HTMLTextAreaElement;
+  const randomSelect = () => {
+    const iterations = 30;
+    if (!selectRandomTag()) return;
+    
+    const interval = setInterval(() => {
+      const randomTag = selectRandomTag();
+      //@ts-ignore
+      highlightTag(randomTag);
 
+      
+      setTimeout(() => {
+        //@ts-ignore
+        unhighlightTag(randomTag);
+      }, 100);
+    }, 150);
+    
+    setTimeout(() => {
+      clearInterval(interval);
+      const textArea = document.getElementById('text-area')! as HTMLTextAreaElement;
+      textArea.disabled = false;
+      textArea.value = '';
+      textArea.focus()
+
+      setTimeout(() => {
+        //@ts-ignore
+        highlightTag(selectRandomTag())
+      }, 150)
+    }, iterations * 100);
+  };
+
+  const selectRandomTag = () => {
+    const tags = document.getElementById('tag-container')!
+      .children as HTMLCollectionOf<HTMLSpanElement>;
+
+    let originalTags = 0;
+    Array.from(tags).forEach((tag) => {
+      if (tag.innerHTML === 'Options' || 'Appear' || 'Here') {
+        originalTags++;
+      }
+    });
+    if (originalTags === 3) {
+      document.getElementById('tag-container')!.replaceChildren(tags[0]);
+      tags[0].innerHTML = 'Enter your choices first!';
+      tags[0].style.boxShadow = 'inset 0 0 0px 1px red';
+      tags[0].style.color = 'red';
+      return false;
+    }
+
+    return tags[Math.floor(Math.random() * tags.length)];
+  };
+
+  const highlightTag = (tag: HTMLSpanElement) => {
+    tag.style.backgroundColor = tag.style.color;
+    tag.style.color = 'white';
+  };
+
+  const unhighlightTag = (tag: HTMLSpanElement) => {
+    const originalColor = tag.style.backgroundColor;
+    tag.style.backgroundColor = 'transparent';
+    tag.style.color = originalColor;
+  };
+
+  const createTags = (textInput: string) => {
     const tagContainer = document.getElementById(
       'tag-container'
     )! as HTMLDivElement;
-    const tagEle = tagContainer.firstChild!;
-    const tagCopy = tagEle! as HTMLSpanElement;
-    const colorSchemes = ['black', 'orange', 'pink', 'red'];
-    const randomTheme = colorSchemes[Math.floor(Math.random() * colorSchemes.length)]
-    tagCopy.style.color = `${
-      randomTheme
-    }`;
-    tagCopy.style.boxShadow = `inset 0 0 0px 1px ${
-      randomTheme
-    }`;
-    tagContainer.replaceChildren(tagCopy);
-    console.log(tagEle);
+    const tagNode = tagContainer.firstChild as HTMLSpanElement;
+    const textArea = document.getElementById(
+      'text-area'
+    )! as HTMLTextAreaElement;
+    if (textInput.slice(-1) === ',') {
+      if (textInput.length - 1 <= 0) return;
+      const randomTheme = randomThemeSelector();
+      const tagCopy = tagNode.cloneNode() as HTMLSpanElement;
+      tagCopy.innerText = textInput.slice(0, textInput.length - 1);
+      tagCopy.style.color = randomTheme;
+      tagCopy.style.boxShadow = `inset 0 0 0px 1px ${randomTheme}`;
+      setNewTag(tagCopy);
+      textArea.value = '';
+    }
+  };
+
+  const handleSubmit = (key: string) => {
+    if (key === 'Enter') {
+      const textArea = document.getElementById('text-area')! as HTMLTextAreaElement;
+      setTimeout(() => {
+        textArea.disabled = true;
+        randomSelect();
+      }, 10);
+    }
   };
 
   React.useEffect(() => {
     document.getElementById('text-area')?.focus();
-  }, []);
+    if (newTag) {
+      if (firstInputRef.current) {
+        document.getElementById('tag-container')!.replaceChildren();
+        console.log('here');
+        firstInputRef.current = false;
+      }
+      document.getElementById('tag-container')?.appendChild(newTag!);
+      setNewTag(null);
+    }
+  }, [newTag]);
 
   return (
     <Chakra.Box
@@ -41,14 +122,7 @@ const OptionPicker: React.FC = () => {
       alignItems='center'
       fontFamily='Poppins'
     >
-      <Chakra.Heading
-        mt='3rem'
-        mb='6rem'
-        fontFamily='inherit'
-        textAlign='center'
-      >
-        Random Option Picker
-      </Chakra.Heading>
+      <Title title='Random Option Picker' color='black' font='Mulish' />
       <Chakra.Box
         display='flex'
         flexDir='column'
@@ -66,11 +140,15 @@ const OptionPicker: React.FC = () => {
         </Chakra.Heading>
         <Chakra.Textarea
           id='text-area'
-          // onChange={(e: React.ChangeEvent) => setUserInput(e.)}
           mt='1rem'
           placeholder='Seperate, options, with, commas'
+          onKeyDown={(e: React.KeyboardEvent) => handleSubmit(e.code)}
+          onChange={(e: React.BaseSyntheticEvent) => createTags(e.target.value)}
         />
-        <small style={{ alignSelf: 'flex-end' }}>press enter to submit</small>
+        <Chakra.Input display='none' type='submit' />
+        <small style={{ alignSelf: 'flex-end' }}>
+          press enter to start selection
+        </small>
         <Chakra.Flex id='tag-container' flexWrap='wrap'>
           <Chakra.Badge
             variant='outline'
@@ -100,7 +178,6 @@ const OptionPicker: React.FC = () => {
             Here
           </Chakra.Badge>
         </Chakra.Flex>
-        <Chakra.Button onClick={() => submitHandler()}>Helper</Chakra.Button>
       </Chakra.Box>
     </Chakra.Box>
   );

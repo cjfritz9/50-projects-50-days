@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Chakra from '@chakra-ui/react';
-import Circles from '../../models/Circles';
+import Circles from '../../../models/Circles';
 import './ProgressSteps.css';
 import Title from '../../Title';
 

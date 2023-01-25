@@ -3,6 +3,7 @@ import * as Router from 'react-router-dom';
 import './SplitLanding.css';
 import PanelLeft from './PanelLeft';
 import PanelRight from './PanelRight';
+import Title from '../../Title';
 
 const SplitLanding: React.FC = () => {
   React.useEffect(() => {
@@ -28,8 +29,8 @@ const SplitLanding: React.FC = () => {
   }, []);
 
   return (
-    <div className='component-container'>
-      <h1 id='project-title'>Split Landing</h1>
+    <div className='component-container' style={{backgroundColor: '#294053'}}>
+      <Title title='Split Landing Page' color='white' font='Poppins' />
       <div className='container-sl'>
         <PanelLeft />
         <PanelRight />

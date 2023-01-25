@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Title from '../../Title';
 import './Boxes.css';
 
 const Boxes: React.FC = () => {
@@ -30,8 +31,8 @@ const Boxes: React.FC = () => {
   }, []);
 
   return (
-    <div className='component-container'>
-      <h1 id='project-title'>Scroll Animations</h1>
+    <div className='component-container' style={{backgroundColor: 'lightblue', height: '100%'}}>
+      <Title title='Scrolling Animation' color='white' font='Mulish' shadow='0px 0px 3px #294053'/>
       <div className='container-sa'>
         <div className='box-sa'>
           <h2>Content</h2>

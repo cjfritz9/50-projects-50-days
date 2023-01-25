@@ -1,21 +1,22 @@
 import * as React from 'react';
 import * as Router from 'react-router-dom';
-import AnimatedForm from './animated-form/AnimatedForm';
-import BlurryLoading from './blurry-loading/BlurryLoading';
-import DadJokes from './dad-jokes-generator/DadJokes';
-import Cards from './expanding-cards/Cards';
-import FAQCollapse from './faq-collapse/FAQCollapse';
+import AnimatedForm from './pages/animated-form/AnimatedForm';
+import BlurryLoading from './pages/blurry-loading/BlurryLoading';
+import DadJokes from './pages/dad-jokes-generator/DadJokes';
+import Cards from './pages/expanding-cards/Cards';
+import FAQCollapse from './pages/faq-collapse/FAQCollapse';
 import Header from './Header';
-import Search from './hidden-search-widget/Search';
-import KeyCodes from './key-codes/KeyCodes';
-import OptionPicker from './option-picker/OptionPicker';
-import ProgressSteps from './progress-steps/ProgressSteps';
-import RotatingNavigation from './rotating-navigation/RotatingNavigation';
-import Boxes from './scroll-animation/Boxes';
-import SoundBoard from './soundboard/SoundBoard';
-import SplitLanding from './split-landing/SplitLanding';
+import Search from './pages/hidden-search-widget/Search';
+import KeyCodes from './pages/key-codes/KeyCodes';
+import OptionPicker from './pages/option-picker/OptionPicker';
+import ProgressSteps from './pages/progress-steps/ProgressSteps';
+import RotatingNavigation from './pages/rotating-navigation/RotatingNavigation';
+import Boxes from './pages/scroll-animation/Boxes';
+import SoundBoard from './pages/soundboard/SoundBoard';
+import SplitLanding from './pages/split-landing/SplitLanding';
 
 const App: React.FC = () => {
+
   return (
     <div id='App' className='App'>
       <Header />

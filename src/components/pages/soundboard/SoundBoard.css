@@ -2,7 +2,6 @@
 .container-sb {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   text-align: center;
 
@@ -10,7 +9,7 @@
 }
 
 .btn-sb {
-  background-color: rebeccapurple;
+  background-color: #294053;
   border-radius: 5px;
   border: none;
   color: white;

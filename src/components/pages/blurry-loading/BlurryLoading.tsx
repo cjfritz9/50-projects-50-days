@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Title from '../../Title';
 import './BlurryLoading.css';
 
 const BlurryLoading: React.FC = () => {
@@ -31,7 +32,12 @@ const BlurryLoading: React.FC = () => {
 
   return (
     <div className='component-container'>
-      <h1 id='project-title'>Blurry Loading</h1>
+      <Title
+        title='Blurry Loading'
+        color='white'
+        font='Sofia Sans'
+        shadow='0px 0px 4px black'
+      />
       <section id='bg' className='bg-bl'></section>
       <div id='load-text' className='loading-text'>
         {loadingPercentage}%

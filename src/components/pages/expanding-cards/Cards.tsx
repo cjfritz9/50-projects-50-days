@@ -1,14 +1,20 @@
-import React from 'react';
+import * as React from 'react';
+import * as Chakra from '@chakra-ui/react';
 import * as Router from 'react-router-dom';
+import Title from '../../Title';
 import Card from './Card';
 import { CardList } from './models/CardList';
 import './Cards.css';
 
 const Cards: React.FC = () => {
   return (
-    <div className='component-container'>
-      <h1 id='project-title'>Expanding Cards</h1>
-      <div className='container-ec'>
+    <Chakra.Flex className='component-container'>
+      <Title
+        title='Expanding Cards'
+        color='black'
+        font='Unbounded'
+      />
+      <Chakra.Flex flexDir={['column', 'row']} className='container-ec'>
         {CardList.map((card) => {
           return (
             <Card
@@ -19,8 +25,8 @@ const Cards: React.FC = () => {
             />
           );
         })}
-      </div>
-    </div>
+      </Chakra.Flex>
+    </Chakra.Flex>
   );
 };
 

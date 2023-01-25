@@ -1,7 +1,9 @@
 import * as React from 'react';
+import Title from '../../Title';
 import './AnimatedForm.css';
 
 const AnimatedForm: React.FC = () => {
+
   React.useEffect(() => {
     const labels = Array.from(
       document.getElementsByClassName('label')
@@ -21,19 +23,34 @@ const AnimatedForm: React.FC = () => {
   }, []);
 
   return (
-    <div className='component-container af-wrap'>
-      <h1 id='project-title'>Animated Form</h1>
+    <div className='component-container af-wrap' style={{backgroundColor: '#2940535c'}}>
+      <Title
+        title='Animated Form'
+        color='white'
+        font='Poppins'
+        shadow='0px 0px 4px gray'
+      />
       <div className='container-af'>
         <h2>Login</h2>
         <form>
           <div className='form-control'>
-            <input id='username' type='text' required />
+            <input
+              id='username'
+              type='text'
+              required
+              autoComplete='new-password'
+            />
             <label htmlFor='username' className='label'>
               Email
             </label>
           </div>
           <div className='form-control'>
-            <input id='password' type='password' required />
+            <input
+              id='password'
+              type='password'
+              required
+              autoComplete='new-password'
+            />
             <label htmlFor='password' className='label'>
               Password
             </label>

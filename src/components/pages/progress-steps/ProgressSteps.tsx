@@ -1,6 +1,8 @@
 import * as React from 'react';
-import Circles from './models/Circles';
+import * as Chakra from '@chakra-ui/react';
+import Circles from '../../models/Circles';
 import './ProgressSteps.css';
+import Title from '../../Title';
 
 const ProgressSteps: React.FC = () => {
   const [active, setActive] = React.useState<number>(1);
@@ -44,8 +46,8 @@ const ProgressSteps: React.FC = () => {
   }, [active]);
 
   return (
-    <div className='component-container'>
-      <h1 id='project-title'>Progress Steps</h1>
+    <Chakra.Flex bgColor='blackAlpha.100' className='component-container'>
+      <Title title='Progress Steps' color='#06233d' font='Mulish' />
       <div className='progress-container'>
         <div className='progress' id='progress'></div>
         {Circles.map((circle) => {
@@ -67,7 +69,7 @@ const ProgressSteps: React.FC = () => {
           Next
         </button>
       </div>
-    </div>
+    </Chakra.Flex>
   );
 };
 

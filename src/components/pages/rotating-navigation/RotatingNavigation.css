@@ -1,7 +1,7 @@
 #menu.container {
   display: flex;
   justify-content: center;
-  background-color: azure;
+  background-color: #29405350;
   transform-origin: top left;
   transition: transform 0.5s linear;
   height: 100%;

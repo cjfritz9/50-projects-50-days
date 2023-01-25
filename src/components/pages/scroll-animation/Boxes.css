@@ -1,9 +1,10 @@
 .container-sa {
+  margin-top: 0px;
   height: 75%;
 }
 
 .box-sa {
-  background-color: rgb(151, 163, 173);
+  background-color: #294053;
   color: #fff;
   display: flex;
   align-items: center;

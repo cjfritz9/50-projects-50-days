@@ -1,7 +1,8 @@
 import axios from 'axios';
 import * as React from 'react';
-import * as Chakra from '@chakra-ui/react'
+import * as Chakra from '@chakra-ui/react';
 import './DadJokes.css';
+import Title from '../../Title';
 
 const DadJokes: React.FC = () => {
   const [joke, setJoke] = React.useState<any>();
@@ -34,29 +35,28 @@ const DadJokes: React.FC = () => {
   }, []);
 
   return (
-    <div className='component-container'>
-      <h1 id='project-title'>Dad Jokes</h1>
-      <div className='container-dj'>
-        {error ? (
-          <div className='joke'>{error}</div>
-        ) : (
-          <div id='joke' className='joke'>
-            {joke ? joke : <Chakra.Spinner/>}
-          </div>
-        )}
-        {error ? (
-          <button className='btn-dj' onClick={() => window.location.reload()}>Try Again</button>
-        ) : (
-          <button
-            onClick={async () => await fetchJoke()}
-            id='joke-btn'
-            className='btn-dj'
-          >
-            Next Joke
-          </button>
-        )}
-      </div>
-    </div>
+    <Chakra.Flex className='component-container' bgColor='gray.200'>
+      <Title title='Dad Jokes' color='black' font='Mulish' />
+
+      <Chakra.Flex
+        alignItems='center'
+        flexDir='column'
+        className='container-dj'
+      >
+        {error || joke || <Chakra.Spinner />}
+        <Chakra.Button
+          _hover={{ opacity: '0.9' }}
+          _active={{ bgColor: 'purple.400', transform: 'scale(0.98)' }}
+          bgColor='purple.500'
+          color='white'
+          mt='2rem'
+          w='20rem'
+          onClick={error ? () => window.location.reload() : () => fetchJoke()}
+        >
+          {error ? 'Try Again' : 'Next Joke'}
+        </Chakra.Button>
+      </Chakra.Flex>
+    </Chakra.Flex>
   );
 };
 

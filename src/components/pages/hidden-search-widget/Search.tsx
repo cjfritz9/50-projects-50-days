@@ -1,6 +1,8 @@
 import * as React from 'react';
-import googleSymbols from '../../utils/google-symbols';
+import * as Chakra from '@chakra-ui/react';
+import googleSymbols from '../../../utils/google-symbols';
 import './Search.css';
+import Title from '../../Title';
 
 const Search: React.FC = () => {
   const handleClick = () => {
@@ -11,8 +13,9 @@ const Search: React.FC = () => {
   };
 
   return (
-    <div className='component-container'>
-      <h1 id='project-title'>Hidden Search</h1>
+    <Chakra.Flex bgColor='blue.200' className='component-container'>
+      <Title title='Hidden Search Widget' color='white' font='Poppins' />
+
       <div id='search' className='search-container'>
         <input
           type='text'
@@ -24,7 +27,7 @@ const Search: React.FC = () => {
           <i className={googleSymbols}>search</i>
         </button>
       </div>
-    </div>
+    </Chakra.Flex>
   );
 };
 

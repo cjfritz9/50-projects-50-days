@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Title from '../../Title';
 import './KeyCodes.css';
 
 const KeyCodes: React.FC = () => {
@@ -21,8 +22,8 @@ const KeyCodes: React.FC = () => {
     window.addEventListener('keydown', (e) => handleKeyPress(e));
   });
   return (
-    <div className='component-container'>
-      <h1 id='project-title'>Key Codes</h1>
+    <div className='component-container' style={{backgroundColor: 'lightgray'}}>
+      <Title title='Key Codes' color='black' font='Poppins' />
       {key ? (
         <div className='container-kc'>
           <div className='key'>

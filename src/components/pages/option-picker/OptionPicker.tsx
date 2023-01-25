@@ -10,30 +10,47 @@ const OptionPicker: React.FC = () => {
   const randomSelect = () => {
     const iterations = 30;
     if (!selectRandomTag()) return;
-    
+
     const interval = setInterval(() => {
       const randomTag = selectRandomTag();
       //@ts-ignore
       highlightTag(randomTag);
 
-      
       setTimeout(() => {
         //@ts-ignore
         unhighlightTag(randomTag);
       }, 100);
     }, 150);
-    
+
     setTimeout(() => {
       clearInterval(interval);
-      const textArea = document.getElementById('text-area')! as HTMLTextAreaElement;
+      const textArea = document.getElementById(
+        'text-area'
+      )! as HTMLTextAreaElement;
       textArea.disabled = false;
       textArea.value = '';
-      textArea.focus()
+      textArea.focus();
 
       setTimeout(() => {
+        let finalChoice = selectRandomTag();
+        const tagContainer = document.getElementById(
+          'tag-container'
+        )! as HTMLDivElement;
+        Array.from(
+          tagContainer.children as HTMLCollectionOf<HTMLSpanElement>
+        ).forEach((tag) => {
+          console.log(tag.innerHTML);
+          // @ts-ignore
+          if (tag.innerHTML != finalChoice.innerHTML) {
+            tag.style.opacity = '0%';
+            tag.style.transition = 'opacity 0.4s';
+          }
+        });
         //@ts-ignore
-        highlightTag(selectRandomTag())
-      }, 150)
+        highlightTag(finalChoice);
+        // @ts-ignore
+        document.getElementById('restart-btn')!.style.display = 'block';
+      }, 150);
     }, iterations * 100);
   };
 
@@ -49,7 +66,9 @@ const OptionPicker: React.FC = () => {
     });
     if (originalTags === 3) {
       document.getElementById('tag-container')!.replaceChildren(tags[0]);
-      const textArea = document.getElementById('text-area')! as HTMLTextAreaElement;
+      const textArea = document.getElementById(
+        'text-area'
+      )! as HTMLTextAreaElement;
       textArea.disabled = false;
       tags[0].innerHTML = 'Enter your choices first!';
       tags[0].style.boxShadow = 'inset 0 0 0px 1px red';
@@ -93,12 +112,23 @@ const OptionPicker: React.FC = () => {
 
   const handleSubmit = (key: string) => {
     if (key === 'Enter') {
-      const textArea = document.getElementById('text-area')! as HTMLTextAreaElement;
+      const textArea = document.getElementById(
+        'text-area'
+      )! as HTMLTextAreaElement;
+      if (textArea.value.length) {
+        createTags(textArea.value + ',');
+      }
       setTimeout(() => {
         textArea.disabled = true;
         randomSelect();
       }, 10);
     }
+  };
+
+  const restart = () => {
+    document.getElementById('tag-container')!.replaceChildren();
+    document.getElementById('restart-btn')!.style.display = 'none';
+    document.getElementById('text-area')!.focus();
   };
 
   React.useEffect(() => {
@@ -180,6 +210,15 @@ const OptionPicker: React.FC = () => {
             Here
           </Chakra.Badge>
         </Chakra.Flex>
+        <Chakra.Button
+          id='restart-btn'
+          colorScheme='green'
+          mt='1rem'
+          display='none'
+          onClick={() => restart()}
+        >
+          Restart
+        </Chakra.Button>
       </Chakra.Box>
     </Chakra.Box>
   );

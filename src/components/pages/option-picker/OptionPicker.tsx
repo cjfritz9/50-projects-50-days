@@ -16,11 +16,12 @@ const OptionPicker: React.FC = () => {
     const tagEle = tagContainer.firstChild!;
     const tagCopy = tagEle! as HTMLSpanElement;
     const colorSchemes = ['black', 'orange', 'pink', 'red'];
+    const randomTheme = colorSchemes[Math.floor(Math.random() * colorSchemes.length)]
     tagCopy.style.color = `${
-      colorSchemes[Math.floor(Math.random() * colorSchemes.length)]
+      randomTheme
     }`;
-    tagCopy.style.boxShadow = `inset 0 0 0px 1 px ${
-      colorSchemes[Math.floor(Math.random() * colorSchemes.length)]
+    tagCopy.style.boxShadow = `inset 0 0 0px 1px ${
+      randomTheme
     }`;
     tagContainer.replaceChildren(tagCopy);
     console.log(tagEle);

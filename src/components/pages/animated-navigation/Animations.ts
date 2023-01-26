@@ -8,10 +8,10 @@ export const FMC_Component = Chakra.chakra(FM.motion.div, {
 
 export const NavContainer = {
   open: {
-    width: ['80px', '350px']
+    width: ['60px', '350px', '350px']
   },
   closed: {
-    width: ['350px', '80px']
+    width: ['350px', '60px', '60px']
   }
 };
 

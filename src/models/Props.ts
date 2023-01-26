@@ -2,8 +2,8 @@ import Fonts from "./Fonts";
 
 type TitleProps = {
   title: string;
-  color: string;
-  font: Fonts;
+  color?: string;
+  font?: Fonts;
   shadow?: string;
 };
 

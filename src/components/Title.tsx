@@ -4,8 +4,8 @@ import TitleProps from '../models/Props';
 
 const Title: React.FC<TitleProps> = ({
   title,
-  color,
-  font,
+  color = 'black',
+  font = 'Poppins',
   shadow = `0px 0px 0px ${color}`
 }) => {
   return (
@@ -16,6 +16,7 @@ const Title: React.FC<TitleProps> = ({
       textShadow={shadow}
       color={color}
       fontFamily={font}
+      textAlign='center'
     >
       {title}
     </Chakra.Heading>

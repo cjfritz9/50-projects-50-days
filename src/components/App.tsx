@@ -14,6 +14,7 @@ import RotatingNavigation from './pages/rotating-navigation/RotatingNavigation';
 import Boxes from './pages/scroll-animation/Boxes';
 import SoundBoard from './pages/soundboard/SoundBoard';
 import SplitLanding from './pages/split-landing/SplitLanding';
+import AnimatedNav from './pages/animated-navigation/AnimatedNav';
 
 const App: React.FC = () => {
   const navigate = Router.useNavigate()
@@ -41,6 +42,7 @@ const App: React.FC = () => {
         <Router.Route path='/components/11' element={<KeyCodes />} />
         <Router.Route path='/components/12' element={<FAQCollapse />} />
         <Router.Route path='/components/13' element={<OptionPicker />} />
+        <Router.Route path='/components/14' element={<AnimatedNav />} />
       </Router.Routes>
     </div>
   );

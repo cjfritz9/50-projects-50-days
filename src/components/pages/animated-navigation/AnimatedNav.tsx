@@ -5,7 +5,7 @@ import * as Animations from './Animations';
 import Title from '../../Title';
 
 const AnimatedNav: React.FC = () => {
-  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const [isOpen, setIsOpen] = React.useState<boolean>(true);
 
   return (
     <Chakra.Box
@@ -28,7 +28,7 @@ const AnimatedNav: React.FC = () => {
         justifyContent='center'
         bgColor='white'
         p='10px'
-        w='80px'
+        w='60px'
         borderRadius='3px'
         boxShadow='0 2px 4px rgba(0, 0, 0, 0.3)'
       >

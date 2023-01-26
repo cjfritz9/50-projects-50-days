@@ -1,3 +1,10 @@
+#username:-webkit-autofill,
+#username:-webkit-autofill:hover,
+#username:-webkit-autofill:focus,
+#username:-webkit-autofill:active {
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease 0s;
+}
 
 .container-af {
   color: white;
@@ -46,22 +53,26 @@
 }
 
 .form-control input:focus,
-.form-control input:valid {
+.form-control input:valid,
+.form-control input:active {
   background-color: transparent;
   outline: 0;
   border-bottom-color: lightblue;
 }
 
+
 .btn-af {
   cursor: pointer;
   display: inline-block;
   width: 100%;
-  background-color: lightblue;
+  background-color: rgb(143, 219, 245);
   padding: 15px;
   font-family: inherit;
   font-size: 16px;
   border: 0;
   border-radius: 5px;
+  font-weight: bold;
+  color: #294053a8;
 }
 
 .btn-af:hover {

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as Chakra from '@chakra-ui/react';
-import * as FM from 'framer-motion';
 import * as Animations from './Animations';
 import Title from '../../Title';
 
@@ -13,7 +12,7 @@ const AnimatedNav: React.FC = () => {
       display='flex'
       flexDir='column'
       alignItems='center'
-      minH='100vh'
+      minH='92vh'
       overflow='hidden'
     >
       <Title title='Animated Nav' />

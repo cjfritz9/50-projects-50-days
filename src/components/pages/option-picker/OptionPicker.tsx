@@ -103,35 +103,6 @@ const OptionPicker: React.FC = () => {
       if (textArea.value.length) {
         createTags(textArea.value + ',');
       }
-      // let originalTags = 0;
-      // const tags = document.getElementById('tag-container')!
-      //   .children as HTMLCollectionOf<HTMLSpanElement>;
-      // Array.from(tags).forEach((tag) => {
-      //   console.log(tag.innerHTML, originalTags);
-      //   if (
-      //     (tags.length === 3 && tag.textContent === 'Options') ||
-      //     'Appear' ||
-      //     'Here'
-      //   ) {
-      //     originalTags++;
-      //   }
-      //   if (tag.innerHTML === 'Invalid Choices') {
-      //     tag.remove();
-      //   }
-      // });
-      // console.log(tags.length);
-
-      // if (tags.length <= 1 || originalTags === 3) {
-      //   document.getElementById('tag-container')!.replaceChildren(tags[0]);
-      //   const textArea = document.getElementById(
-      //     'text-area'
-      //   )! as HTMLTextAreaElement;
-      //   textArea.disabled = false;
-      //   tags[0].innerHTML = 'Invalid Choices';
-      //   tags[0].style.boxShadow = 'inset 0 0 0px 1px red';
-      //   tags[0].style.color = 'red';
-      //   return;
-      // }
       setTimeout(() => {
         textArea.disabled = true;
         randomSelect();
@@ -165,8 +136,7 @@ const OptionPicker: React.FC = () => {
 
   return (
     <Chakra.Box
-      minW='100vw'
-      minH='100vh'
+      minH='92vh'
       bgColor='white'
       display='flex'
       flexDir='column'

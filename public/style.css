@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Poppins&family=Sofia+Sans&family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Poppins&family=Sofia+Sans&family=Unbounded&family=Roboto+Mono&display=swap');
 
 * {
   box-sizing: border-box;
@@ -22,7 +22,8 @@ body {
 }
 
 .component-container {
-  height: 100vh;
+  min-height: 92vh;
+  height: 92vh;
   width: 100vw;
   display: flex;
   flex-direction: column;

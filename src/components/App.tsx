@@ -15,6 +15,7 @@ import Boxes from './pages/scroll-animation/Boxes';
 import SoundBoard from './pages/soundboard/SoundBoard';
 import SplitLanding from './pages/split-landing/SplitLanding';
 import AnimatedNav from './pages/animated-navigation/AnimatedNav';
+import IncrementalCounter from './pages/incremental-counter/IncrementalCounter';
 
 const App: React.FC = () => {
   const navigate = Router.useNavigate()
@@ -43,6 +44,7 @@ const App: React.FC = () => {
         <Router.Route path='/components/12' element={<FAQCollapse />} />
         <Router.Route path='/components/13' element={<OptionPicker />} />
         <Router.Route path='/components/14' element={<AnimatedNav />} />
+        <Router.Route path='/components/15' element={<IncrementalCounter />} />
       </Router.Routes>
     </div>
   );

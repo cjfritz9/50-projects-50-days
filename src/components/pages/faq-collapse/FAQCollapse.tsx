@@ -8,7 +8,7 @@ const FAQCollapse: React.FC = () => {
       flexDir='column'
       alignItems='center'
       w='100vw'
-      h='100vh'
+      h='92vh'
       bgColor='#F0F0F0'
       fontFamily='Sofia Sans'
     >

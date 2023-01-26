@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   const [isNextDisabled, setIsNextDisabled] = React.useState<boolean>(false);
   const navigate = useNavigate();
 
-  const numOfComponents = 14;
+  const numOfComponents = 15;
 
   const navHandler = (button: string): void => {
     const url = window.location.href;
@@ -54,11 +54,14 @@ const Header: React.FC = () => {
 
   return (
     <Chakra.Flex
+      id='testing-id'
       backgroundColor='#294053'
       justifyContent='space-between'
       alignItems='center'
       p='1rem 3rem'
       w='100vw'
+      minW='100vw'
+      minH='8vh'
       zIndex={1}
     >
       <Chakra.Button

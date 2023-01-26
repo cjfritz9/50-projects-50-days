@@ -10,7 +10,7 @@ const Title: React.FC<TitleProps> = ({
 }) => {
   return (
     <Chakra.Heading
-      size={['xl', '3xl']}
+      size={['3xl', '3xl']}
       mt='2rem'
       mb='5rem'
       textShadow={shadow}

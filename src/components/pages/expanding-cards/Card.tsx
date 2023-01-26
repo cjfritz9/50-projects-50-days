@@ -13,6 +13,10 @@ const Card: React.FC<CardProps> = ({ title, url, active }) => {
       'panel-ec'
     )! as HTMLCollectionOf<HTMLDivElement>;
 
+    if (target.id === 'title') {
+      return;
+    }
+
     for (const panel of panels) {
       panel.classList.remove('active');
     }
@@ -26,7 +30,9 @@ const Card: React.FC<CardProps> = ({ title, url, active }) => {
       style={{ backgroundImage: `url(${url})` }}
       onClick={(e) => toggleActive(e)}
     >
-      <h3 className='panel-h3'>{title}</h3>
+      <h3 id='title' className='panel-h3'>
+        {title}
+      </h3>
     </div>
   );
 };

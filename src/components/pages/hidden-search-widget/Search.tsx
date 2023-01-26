@@ -5,6 +5,7 @@ import './Search.css';
 import Title from '../../Title';
 
 const Search: React.FC = () => {
+  
   const handleClick = (e: React.MouseEvent) => {
     const searchElement = document.getElementById('search')! as HTMLDivElement;
     const searchInput = document.getElementById(

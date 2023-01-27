@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Chakra from '@chakra-ui/react';
 import { FMC_Component } from '../../../utils/animations';
-import * as RI_io5 from 'react-icons/io5';
+import { IoWaterOutline } from 'react-icons/io5';
 import Title from '../../Title';
 
 const WaterTracker: React.FC = () => {
@@ -121,7 +121,7 @@ const WaterTracker: React.FC = () => {
           cursor='pointer'
           className='water-drop'
           fontSize={['96px', '96px', '144px']}
-          as={RI_io5.IoWaterOutline}
+          as={IoWaterOutline}
           onClick={() => toggleWater(0)}
         />
         <Chakra.Icon
@@ -129,7 +129,7 @@ const WaterTracker: React.FC = () => {
           cursor='pointer'
           className='water-drop'
           fontSize={['96px', '96px', '144px']}
-          as={RI_io5.IoWaterOutline}
+          as={IoWaterOutline}
           onClick={() => toggleWater(1)}
         />
         <Chakra.Icon
@@ -137,7 +137,7 @@ const WaterTracker: React.FC = () => {
           cursor='pointer'
           className='water-drop'
           fontSize={['96px', '96px', '144px']}
-          as={RI_io5.IoWaterOutline}
+          as={IoWaterOutline}
           onClick={() => toggleWater(2)}
         />
         <Chakra.Icon
@@ -145,7 +145,7 @@ const WaterTracker: React.FC = () => {
           cursor='pointer'
           className='water-drop'
           fontSize={['96px', '96px', '144px']}
-          as={RI_io5.IoWaterOutline}
+          as={IoWaterOutline}
           onClick={() => toggleWater(3)}
         />
         <Chakra.Icon
@@ -153,7 +153,7 @@ const WaterTracker: React.FC = () => {
           cursor='pointer'
           className='water-drop'
           fontSize={['96px', '96px', '144px']}
-          as={RI_io5.IoWaterOutline}
+          as={IoWaterOutline}
           onClick={() => toggleWater(4)}
         />
         <Chakra.Icon
@@ -161,7 +161,7 @@ const WaterTracker: React.FC = () => {
           cursor='pointer'
           className='water-drop'
           fontSize={['96px', '96px', '144px']}
-          as={RI_io5.IoWaterOutline}
+          as={IoWaterOutline}
           onClick={() => toggleWater(5)}
         />
         <Chakra.Icon
@@ -169,7 +169,7 @@ const WaterTracker: React.FC = () => {
           cursor='pointer'
           className='water-drop'
           fontSize={['96px', '96px', '144px']}
-          as={RI_io5.IoWaterOutline}
+          as={IoWaterOutline}
           onClick={() => toggleWater(6)}
         />
         <Chakra.Icon
@@ -177,7 +177,7 @@ const WaterTracker: React.FC = () => {
           cursor='pointer'
           className='water-drop'
           fontSize={['96px', '96px', '144px']}
-          as={RI_io5.IoWaterOutline}
+          as={IoWaterOutline}
           onClick={() => toggleWater(7)}
         />
       </Chakra.SimpleGrid>

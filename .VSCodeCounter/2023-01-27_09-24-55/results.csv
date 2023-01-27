@@ -1,0 +1,55 @@
+"filename", "language", "CSS", "JSON with Comments", "TypeScript", "JSON", "TypeScript React", "Markdown", "HTML", "comment", "blank", "total"
+"/home/cjfritz/learning/50-projects-50-days/README.md", "Markdown", 0, 0, 0, 0, 0, 2, 0, 0, 1, 3
+"/home/cjfritz/learning/50-projects-50-days/index.d.ts", "TypeScript", 0, 0, 2, 0, 0, 0, 0, 0, 0, 2
+"/home/cjfritz/learning/50-projects-50-days/package.json", "JSON", 0, 0, 0, 37, 0, 0, 0, 0, 1, 38
+"/home/cjfritz/learning/50-projects-50-days/public/index.html", "HTML", 0, 0, 0, 0, 0, 0, 17, 0, 1, 18
+"/home/cjfritz/learning/50-projects-50-days/public/style.css", "CSS", 33, 0, 0, 0, 0, 0, 0, 1, 8, 42
+"/home/cjfritz/learning/50-projects-50-days/src/components/App.tsx", "TypeScript React", 0, 0, 0, 0, 53, 0, 0, 0, 5, 58
+"/home/cjfritz/learning/50-projects-50-days/src/components/Header.tsx", "TypeScript React", 0, 0, 0, 0, 100, 0, 0, 0, 9, 109
+"/home/cjfritz/learning/50-projects-50-days/src/components/Title.tsx", "TypeScript React", 0, 0, 0, 0, 24, 0, 0, 0, 3, 27
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/animated-form/AnimatedForm.css", "CSS", 93, 0, 0, 0, 0, 0, 0, 0, 18, 111
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/animated-form/AnimatedForm.tsx", "TypeScript React", 0, 0, 0, 0, 63, 0, 0, 0, 6, 69
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/animated-navigation/AnimatedNav.tsx", "TypeScript React", 0, 0, 0, 0, 175, 0, 0, 8, 3, 186
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/blurry-loading/BlurryLoading.css", "CSS", 16, 0, 0, 0, 0, 0, 0, 0, 1, 17
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/blurry-loading/BlurryLoading.tsx", "TypeScript React", 0, 0, 0, 0, 44, 0, 0, 0, 6, 50
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/blurry-loading/LoadingText.tsx", "TypeScript React", 0, 0, 0, 0, 15, 0, 0, 0, 5, 20
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/dad-jokes-generator/DadJokes.css", "CSS", 37, 0, 0, 0, 0, 0, 0, 0, 5, 42
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/dad-jokes-generator/DadJokes.tsx", "TypeScript React", 0, 0, 0, 0, 57, 0, 0, 0, 7, 64
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/expanding-cards/Card.tsx", "TypeScript React", 0, 0, 0, 0, 33, 0, 0, 0, 8, 41
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/expanding-cards/Cards.css", "CSS", 43, 0, 0, 0, 0, 0, 0, 0, 10, 53
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/expanding-cards/Cards.tsx", "TypeScript React", 0, 0, 0, 0, 31, 0, 0, 0, 3, 34
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/expanding-cards/models/CardList.ts", "TypeScript", 0, 0, 32, 0, 0, 0, 0, 0, 0, 32
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/faq-collapse/FAQCollapse.tsx", "TypeScript React", 0, 0, 0, 0, 194, 0, 0, 0, 3, 197
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/hidden-search-widget/Search.css", "CSS", 35, 0, 0, 0, 0, 0, 0, 0, 5, 40
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/hidden-search-widget/Search.tsx", "TypeScript React", 0, 0, 0, 0, 52, 0, 0, 0, 6, 58
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/incremental-counter/IncrementalCounter.tsx", "TypeScript React", 0, 0, 0, 0, 102, 0, 0, 0, 10, 112
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/key-codes/KeyCodes.css", "CSS", 27, 0, 0, 0, 0, 0, 0, 0, 3, 30
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/key-codes/KeyCodes.tsx", "TypeScript React", 0, 0, 0, 0, 45, 0, 0, 0, 5, 50
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/movie-app/MovieApp.tsx", "TypeScript React", 0, 0, 0, 0, 12, 0, 0, 0, 3, 15
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/option-picker/OptionPicker.tsx", "TypeScript React", 0, 0, 0, 0, 195, 0, 0, 4, 18, 217
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/progress-steps/ProgressSteps.css", "CSS", 71, 0, 0, 0, 0, 0, 0, 0, 11, 82
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/progress-steps/ProgressSteps.tsx", "TypeScript React", 0, 0, 0, 0, 67, 0, 0, 0, 10, 77
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/Blog.tsx", "TypeScript React", 0, 0, 0, 0, 40, 0, 0, 0, 4, 44
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/Menu.tsx", "TypeScript React", 0, 0, 0, 0, 57, 0, 0, 2, 8, 67
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/Nav.tsx", "TypeScript React", 0, 0, 0, 0, 20, 0, 0, 0, 3, 23
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/RotatingNavigation.css", "CSS", 122, 0, 0, 0, 0, 0, 0, 0, 22, 144
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/RotatingNavigation.tsx", "TypeScript React", 0, 0, 0, 0, 18, 0, 0, 0, 4, 22
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/scroll-animation/Boxes.css", "CSS", 27, 0, 0, 0, 0, 0, 0, 0, 5, 32
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/scroll-animation/Boxes.tsx", "TypeScript React", 0, 0, 0, 0, 75, 0, 0, 0, 7, 82
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/soundboard/SoundBoard.css", "CSS", 24, 0, 0, 0, 0, 0, 0, 0, 5, 29
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/soundboard/SoundBoard.tsx", "TypeScript React", 0, 0, 0, 0, 49, 0, 0, 0, 6, 55
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/split-landing/PanelLeft.tsx", "TypeScript React", 0, 0, 0, 0, 12, 0, 0, 0, 3, 15
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/split-landing/PanelRight.tsx", "TypeScript React", 0, 0, 0, 0, 12, 0, 0, 0, 3, 15
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/split-landing/SplitLanding.css", "CSS", 108, 0, 0, 0, 0, 0, 0, 0, 18, 126
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/split-landing/SplitLanding.tsx", "TypeScript React", 0, 0, 0, 0, 35, 0, 0, 0, 8, 43
+"/home/cjfritz/learning/50-projects-50-days/src/components/pages/water-tracker/WaterTracker.tsx", "TypeScript React", 0, 0, 0, 0, 174, 0, 0, 7, 8, 189
+"/home/cjfritz/learning/50-projects-50-days/src/index.tsx", "TypeScript React", 0, 0, 0, 0, 14, 0, 0, 0, 3, 17
+"/home/cjfritz/learning/50-projects-50-days/src/models/Circles.ts", "TypeScript", 0, 0, 19, 0, 0, 0, 0, 0, 1, 20
+"/home/cjfritz/learning/50-projects-50-days/src/models/ColorSchemes.ts", "TypeScript", 0, 0, 20, 0, 0, 0, 0, 0, 2, 22
+"/home/cjfritz/learning/50-projects-50-days/src/models/Fonts.ts", "TypeScript", 0, 0, 2, 0, 0, 0, 0, 0, 1, 3
+"/home/cjfritz/learning/50-projects-50-days/src/models/Props.ts", "TypeScript", 0, 0, 8, 0, 0, 0, 0, 0, 2, 10
+"/home/cjfritz/learning/50-projects-50-days/src/utils/animations.ts", "TypeScript", 0, 0, 41, 0, 0, 0, 0, 0, 8, 49
+"/home/cjfritz/learning/50-projects-50-days/src/utils/google-symbols.ts", "TypeScript", 0, 0, 2, 0, 0, 0, 0, 0, 1, 3
+"/home/cjfritz/learning/50-projects-50-days/src/utils/helpers.ts", "TypeScript", 0, 0, 4, 0, 0, 0, 0, 0, 2, 6
+"/home/cjfritz/learning/50-projects-50-days/tsconfig.json", "JSON with Comments", 0, 32, 0, 0, 0, 0, 0, 73, 9, 114
+"Total", "-", 636, 32, 130, 37, 1768, 2, 17, 95, 307, 3024

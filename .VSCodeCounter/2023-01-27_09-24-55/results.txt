@@ -1,0 +1,111 @@
+Date : 2023-01-27 09:24:55
+Directory : /home/cjfritz/learning/50-projects-50-days
+Total : 53 files,  2622 codes, 95 comments, 307 blanks, all 3024 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| TypeScript React   |         28 |      1,768 |         21 |        167 |      1,956 |
+| CSS                |         12 |        636 |          1 |        111 |        748 |
+| TypeScript         |          9 |        130 |          0 |         17 |        147 |
+| JSON               |          1 |         37 |          0 |          1 |         38 |
+| JSON with Comments |          1 |         32 |         73 |          9 |        114 |
+| HTML               |          1 |         17 |          0 |          1 |         18 |
+| Markdown           |          1 |          2 |          0 |          1 |          3 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                          |         53 |      2,622 |         95 |        307 |      3,024 |
+| . (Files)                                                                                                  |          4 |         73 |         73 |         11 |        157 |
+| public                                                                                                     |          2 |         50 |          1 |          9 |         60 |
+| src                                                                                                        |         47 |      2,499 |         21 |        287 |      2,807 |
+| src (Files)                                                                                                |          1 |         14 |          0 |          3 |         17 |
+| src/components                                                                                             |         39 |      2,389 |         21 |        267 |      2,677 |
+| src/components (Files)                                                                                     |          3 |        177 |          0 |         17 |        194 |
+| src/components/pages                                                                                       |         36 |      2,212 |         21 |        250 |      2,483 |
+| src/components/pages/animated-form                                                                         |          2 |        156 |          0 |         24 |        180 |
+| src/components/pages/animated-navigation                                                                   |          1 |        175 |          8 |          3 |        186 |
+| src/components/pages/blurry-loading                                                                        |          3 |         75 |          0 |         12 |         87 |
+| src/components/pages/dad-jokes-generator                                                                   |          2 |         94 |          0 |         12 |        106 |
+| src/components/pages/expanding-cards                                                                       |          4 |        139 |          0 |         21 |        160 |
+| src/components/pages/expanding-cards (Files)                                                               |          3 |        107 |          0 |         21 |        128 |
+| src/components/pages/expanding-cards/models                                                                |          1 |         32 |          0 |          0 |         32 |
+| src/components/pages/faq-collapse                                                                          |          1 |        194 |          0 |          3 |        197 |
+| src/components/pages/hidden-search-widget                                                                  |          2 |         87 |          0 |         11 |         98 |
+| src/components/pages/incremental-counter                                                                   |          1 |        102 |          0 |         10 |        112 |
+| src/components/pages/key-codes                                                                             |          2 |         72 |          0 |          8 |         80 |
+| src/components/pages/movie-app                                                                             |          1 |         12 |          0 |          3 |         15 |
+| src/components/pages/option-picker                                                                         |          1 |        195 |          4 |         18 |        217 |
+| src/components/pages/progress-steps                                                                        |          2 |        138 |          0 |         21 |        159 |
+| src/components/pages/rotating-navigation                                                                   |          5 |        257 |          2 |         41 |        300 |
+| src/components/pages/scroll-animation                                                                      |          2 |        102 |          0 |         12 |        114 |
+| src/components/pages/soundboard                                                                            |          2 |         73 |          0 |         11 |         84 |
+| src/components/pages/split-landing                                                                         |          4 |        167 |          0 |         32 |        199 |
+| src/components/pages/water-tracker                                                                         |          1 |        174 |          7 |          8 |        189 |
+| src/models                                                                                                 |          4 |         49 |          0 |          6 |         55 |
+| src/utils                                                                                                  |          3 |         47 |          0 |         11 |         58 |
++------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                   | language           | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /home/cjfritz/learning/50-projects-50-days/README.md                                                       | Markdown           |          2 |          0 |          1 |          3 |
+| /home/cjfritz/learning/50-projects-50-days/index.d.ts                                                      | TypeScript         |          2 |          0 |          0 |          2 |
+| /home/cjfritz/learning/50-projects-50-days/package.json                                                    | JSON               |         37 |          0 |          1 |         38 |
+| /home/cjfritz/learning/50-projects-50-days/public/index.html                                               | HTML               |         17 |          0 |          1 |         18 |
+| /home/cjfritz/learning/50-projects-50-days/public/style.css                                                | CSS                |         33 |          1 |          8 |         42 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/App.tsx                                          | TypeScript React   |         53 |          0 |          5 |         58 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/Header.tsx                                       | TypeScript React   |        100 |          0 |          9 |        109 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/Title.tsx                                        | TypeScript React   |         24 |          0 |          3 |         27 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/animated-form/AnimatedForm.css             | CSS                |         93 |          0 |         18 |        111 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/animated-form/AnimatedForm.tsx             | TypeScript React   |         63 |          0 |          6 |         69 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/animated-navigation/AnimatedNav.tsx        | TypeScript React   |        175 |          8 |          3 |        186 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/blurry-loading/BlurryLoading.css           | CSS                |         16 |          0 |          1 |         17 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/blurry-loading/BlurryLoading.tsx           | TypeScript React   |         44 |          0 |          6 |         50 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/blurry-loading/LoadingText.tsx             | TypeScript React   |         15 |          0 |          5 |         20 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/dad-jokes-generator/DadJokes.css           | CSS                |         37 |          0 |          5 |         42 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/dad-jokes-generator/DadJokes.tsx           | TypeScript React   |         57 |          0 |          7 |         64 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/expanding-cards/Card.tsx                   | TypeScript React   |         33 |          0 |          8 |         41 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/expanding-cards/Cards.css                  | CSS                |         43 |          0 |         10 |         53 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/expanding-cards/Cards.tsx                  | TypeScript React   |         31 |          0 |          3 |         34 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/expanding-cards/models/CardList.ts         | TypeScript         |         32 |          0 |          0 |         32 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/faq-collapse/FAQCollapse.tsx               | TypeScript React   |        194 |          0 |          3 |        197 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/hidden-search-widget/Search.css            | CSS                |         35 |          0 |          5 |         40 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/hidden-search-widget/Search.tsx            | TypeScript React   |         52 |          0 |          6 |         58 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/incremental-counter/IncrementalCounter.tsx | TypeScript React   |        102 |          0 |         10 |        112 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/key-codes/KeyCodes.css                     | CSS                |         27 |          0 |          3 |         30 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/key-codes/KeyCodes.tsx                     | TypeScript React   |         45 |          0 |          5 |         50 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/movie-app/MovieApp.tsx                     | TypeScript React   |         12 |          0 |          3 |         15 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/option-picker/OptionPicker.tsx             | TypeScript React   |        195 |          4 |         18 |        217 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/progress-steps/ProgressSteps.css           | CSS                |         71 |          0 |         11 |         82 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/progress-steps/ProgressSteps.tsx           | TypeScript React   |         67 |          0 |         10 |         77 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/Blog.tsx               | TypeScript React   |         40 |          0 |          4 |         44 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/Menu.tsx               | TypeScript React   |         57 |          2 |          8 |         67 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/Nav.tsx                | TypeScript React   |         20 |          0 |          3 |         23 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/RotatingNavigation.css | CSS                |        122 |          0 |         22 |        144 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/rotating-navigation/RotatingNavigation.tsx | TypeScript React   |         18 |          0 |          4 |         22 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/scroll-animation/Boxes.css                 | CSS                |         27 |          0 |          5 |         32 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/scroll-animation/Boxes.tsx                 | TypeScript React   |         75 |          0 |          7 |         82 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/soundboard/SoundBoard.css                  | CSS                |         24 |          0 |          5 |         29 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/soundboard/SoundBoard.tsx                  | TypeScript React   |         49 |          0 |          6 |         55 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/split-landing/PanelLeft.tsx                | TypeScript React   |         12 |          0 |          3 |         15 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/split-landing/PanelRight.tsx               | TypeScript React   |         12 |          0 |          3 |         15 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/split-landing/SplitLanding.css             | CSS                |        108 |          0 |         18 |        126 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/split-landing/SplitLanding.tsx             | TypeScript React   |         35 |          0 |          8 |         43 |
+| /home/cjfritz/learning/50-projects-50-days/src/components/pages/water-tracker/WaterTracker.tsx             | TypeScript React   |        174 |          7 |          8 |        189 |
+| /home/cjfritz/learning/50-projects-50-days/src/index.tsx                                                   | TypeScript React   |         14 |          0 |          3 |         17 |
+| /home/cjfritz/learning/50-projects-50-days/src/models/Circles.ts                                           | TypeScript         |         19 |          0 |          1 |         20 |
+| /home/cjfritz/learning/50-projects-50-days/src/models/ColorSchemes.ts                                      | TypeScript         |         20 |          0 |          2 |         22 |
+| /home/cjfritz/learning/50-projects-50-days/src/models/Fonts.ts                                             | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/cjfritz/learning/50-projects-50-days/src/models/Props.ts                                             | TypeScript         |          8 |          0 |          2 |         10 |
+| /home/cjfritz/learning/50-projects-50-days/src/utils/animations.ts                                         | TypeScript         |         41 |          0 |          8 |         49 |
+| /home/cjfritz/learning/50-projects-50-days/src/utils/google-symbols.ts                                     | TypeScript         |          2 |          0 |          1 |          3 |
+| /home/cjfritz/learning/50-projects-50-days/src/utils/helpers.ts                                            | TypeScript         |          4 |          0 |          2 |          6 |
+| /home/cjfritz/learning/50-projects-50-days/tsconfig.json                                                   | JSON with Comments |         32 |         73 |          9 |        114 |
+| Total                                                                                                      |                    |      2,622 |         95 |        307 |      3,024 |
++------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

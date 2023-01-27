@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Chakra from '@chakra-ui/react';
-import * as Animations from './Animations';
+import * as Animations from '../../../utils/animations';
 import Title from '../../Title';
 
 const AnimatedNav: React.FC = () => {
@@ -164,8 +164,8 @@ const AnimatedNav: React.FC = () => {
             as={Animations.FMC_Component}
             animate={
               isOpen
-              ? Animations.NavIcon.bottom.open
-              : Animations.NavIcon.bottom.closed
+                ? Animations.NavIcon.bottom.open
+                : Animations.NavIcon.bottom.closed
             }
             //@ts-ignore
             transition={Animations.ChildrenTransition}

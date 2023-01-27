@@ -16,15 +16,17 @@ import SoundBoard from './pages/soundboard/SoundBoard';
 import SplitLanding from './pages/split-landing/SplitLanding';
 import AnimatedNav from './pages/animated-navigation/AnimatedNav';
 import IncrementalCounter from './pages/incremental-counter/IncrementalCounter';
+import WaterTracker from './pages/water-tracker/WaterTracker';
+import MovieApp from './pages/movie-app/MovieApp';
 
 const App: React.FC = () => {
-  const navigate = Router.useNavigate()
+  const navigate = Router.useNavigate();
 
   React.useEffect(() => {
     if (!window.location.href.slice(-13).includes('components')) {
-      navigate('/components/1')
+      navigate('/components/1');
     }
-  }, [])
+  }, []);
 
   return (
     <div id='App' className='App'>
@@ -45,6 +47,8 @@ const App: React.FC = () => {
         <Router.Route path='/components/13' element={<OptionPicker />} />
         <Router.Route path='/components/14' element={<AnimatedNav />} />
         <Router.Route path='/components/15' element={<IncrementalCounter />} />
+        <Router.Route path='/components/16' element={<WaterTracker />} />
+        <Router.Route path='/components/17' element={<MovieApp />} />
       </Router.Routes>
     </div>
   );

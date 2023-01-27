@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as Chakra from '@chakra-ui/react';
 import * as RI from 'react-icons/fa';
-import * as FM from 'framer-motion';
 import Title from '../../Title';
 
 const IncrementalCounter: React.FC = () => {

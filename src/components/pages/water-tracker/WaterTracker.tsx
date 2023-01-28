@@ -38,11 +38,7 @@ const WaterTracker: React.FC = () => {
       Array.from(waterDrops).forEach((waterDrop) => {
         if (waterDrop.firstChild) {
           //@ts-ignore
-          waterDrop.firstChild.style.fill = 'white';
-          // waterDrop.childNodes.forEach((node) => {
-          //   //@ts-ignore
-          //   node.setAttribute('id', waterDrop.id.toString());
-          // });
+          waterDrop.firstChild.style!.fill = 'white';
         }
       });
     }

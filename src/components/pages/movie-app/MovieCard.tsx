@@ -32,7 +32,7 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
           bgColor='#E0E1DD'
           m='2rem'
           w='sm'
-          h='20rem'
+          h='19rem'
           overflow='hidden'
         >
           {movie && (
@@ -44,13 +44,13 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
                     ? {
                         transform: [
                           'translateY(-0px)',
-                          'translateY(-280px)',
-                          'translateY(-280px)'
+                          'translateY(-300px)',
+                          'translateY(-300px)'
                         ]
                       }
                     : {
                         transform: [
-                          'translateY(-280px)',
+                          'translateY(-300px)',
                           'translateY(-0px)',
                           'translateY(-0px)'
                         ]
@@ -61,6 +61,7 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
                 transform: 'translateY(0px)'
               }}
               cursor='default'
+              h='30rem'
             >
               <Chakra.CardBody>
                 <Chakra.Box>
@@ -75,7 +76,7 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
                     display='flex'
                     alignItems='flex-end'
                     justifyContent='center'
-                    minH='200px'
+                    minH='220px'
                     w='100%'
                     borderRadius='lg'
                     px='5px'
@@ -91,25 +92,29 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
                     </Chakra.Heading>
                   </Chakra.Box>
                 </Chakra.Box>
-                <Chakra.Stack mt='6' spacing='3' px='10px'>
+                <Chakra.Stack mt='4' spacing='3' px='10px'>
                   <Chakra.Flex
+                    mb='2rem'
                     justifyContent='space-between'
                     alignItems='baseline'
                   >
-                    <Chakra.Text cursor='default' fontWeight='bold'>
-                      Hover For Details
-                    </Chakra.Text>
                     <Chakra.Text
                       color='#0D1B2A'
                       fontSize='2xl'
                       fontWeight='bold'
                       cursor='default'
+                      ml='2px'
                     >
                       {movie.vote_average}
                     </Chakra.Text>
                   </Chakra.Flex>
                   <AnimatePresence>
-                    <Chakra.Text as={motion.div} layout cursor='default'>
+                    <Chakra.Text
+                      h='10rem'
+                      as={motion.div}
+                      layout
+                      cursor='default'
+                    >
                       {movie.overview.length >= 288
                         ? trimOverview(movie.overview)
                         : movie.overview}
@@ -122,6 +127,7 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
                 <Chakra.ButtonGroup
                   w='100%'
                   display='flex'
+                  alignItems='center'
                   justifyContent='center'
                   spacing='2'
                   pt='10px'

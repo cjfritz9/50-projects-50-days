@@ -71,8 +71,8 @@ const MovieApp: React.FC = () => {
       </Chakra.Flex>
       <Chakra.Flex as='main' flexWrap='wrap'>
         {(movies &&
-          movies.map((movie: Movie) => {
-            return <MovieCard movie={movie} />;
+          movies.map((movie: Movie, idx) => {
+            return <MovieCard movie={movie} key={idx} />;
           })) || <Chakra.Spinner></Chakra.Spinner>}
       </Chakra.Flex>
     </Chakra.Box>

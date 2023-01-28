@@ -20,7 +20,7 @@ const Search: React.FC<SearchProps> = ({
   const [searchInput, setSearchInput] = React.useState<string>();
 
   const handleKeydown = (key: string, keyCode: number) => {
-    if (key === 'Enter' && keyCode === 13 && searchInput) {
+    if (keyCode === 13 && searchInput) {
       handleSearch(TMDB.SEARCH_URL);
     } else if (key === 'Enter' && !searchInput) {
       fetchMovies(TMDB.POPULAR_MOVIES_ALLTIME);

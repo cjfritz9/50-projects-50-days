@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as Chakra from '@chakra-ui/react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaStar } from 'react-icons/fa';
 import * as TMDB from './utils/api';
 import Movie from './models';
 
@@ -13,7 +14,7 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
   const firstRenderRef = React.useRef(true);
 
   if (isHovered) {
-    console.log('test');
+    console.log(movie);
     firstRenderRef.current = false;
   }
 
@@ -99,14 +100,35 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
                     alignItems='baseline'
                   >
                     <Chakra.Text
-                      color='#0D1B2A'
+                      color='gray.500'
                       fontSize='2xl'
                       fontWeight='bold'
                       cursor='default'
-                      ml='2px'
+                      mr='2px'
                     >
-                      {movie.vote_average}
+                      {movie.release_date.slice(0, 4)}
                     </Chakra.Text>
+                    <Chakra.Flex alignItems='center'>
+                      <Chakra.Text
+                        color='#0D1B2A'
+                        fontSize='2xl'
+                        fontWeight='bold'
+                        cursor='default'
+                        ml='2px'
+                        w='2.5rem'
+                      >
+                        {movie.vote_average}
+                      </Chakra.Text>
+                      <Chakra.Icon
+                        as={FaStar}
+                        color='#415A77'
+                        fontSize='27px'
+                        fontWeight='bold'
+                        cursor='default'
+                        ml='2px'
+                        pb='3px'
+                      />
+                    </Chakra.Flex>
                   </Chakra.Flex>
                   <AnimatePresence>
                     <Chakra.Text

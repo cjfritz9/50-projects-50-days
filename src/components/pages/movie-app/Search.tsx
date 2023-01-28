@@ -19,8 +19,9 @@ const Search: React.FC<SearchProps> = ({
 }) => {
   const [searchInput, setSearchInput] = React.useState<string>();
 
-  const handleKeydown = (key: string) => {
-    if (key === 'Enter' && searchInput) {
+  const handleKeydown = (key: string, key2: string) => {
+    console.log(key2);
+    if (key === 'Enter' && key2 === 'Enter' && searchInput) {
       handleSearch(TMDB.SEARCH_URL);
     } else if (key === 'Enter' && !searchInput) {
       fetchMovies(TMDB.POPULAR_MOVIES_ALLTIME);
@@ -53,7 +54,7 @@ const Search: React.FC<SearchProps> = ({
           value={searchInput}
           _focus={{ border: '1.5px solid', borderColor: 'inherit' }}
           bgColor='white'
-          onKeyDown={(e: React.KeyboardEvent) => handleKeydown(e.code)}
+          onKeyDown={(e: React.KeyboardEvent) => handleKeydown(e.code, e.key)}
           onChange={(e: React.ChangeEvent) =>
             setSearchInput((e.target as HTMLInputElement).value)
           }

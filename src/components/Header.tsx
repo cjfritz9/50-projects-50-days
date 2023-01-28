@@ -60,8 +60,6 @@ const Header: React.FC = () => {
       alignItems='center'
       p='1rem 3rem'
       w='100vw'
-      minW='100vw'
-      minH='8vh'
       zIndex={1}
     >
       <Chakra.Button

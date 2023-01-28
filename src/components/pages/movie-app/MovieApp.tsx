@@ -70,10 +70,10 @@ const MovieApp: React.FC = () => {
         </Chakra.InputGroup>
       </Chakra.Flex>
       <Chakra.Flex as='main' flexWrap='wrap'>
-        {movies &&
+        {(movies &&
           movies.map((movie: Movie) => {
             return <MovieCard movie={movie} />;
-          })}
+          })) || <Chakra.Spinner></Chakra.Spinner>}
       </Chakra.Flex>
     </Chakra.Box>
   );

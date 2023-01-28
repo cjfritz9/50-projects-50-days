@@ -49,7 +49,6 @@ const MovieApp: React.FC = () => {
   return (
     <Chakra.Box bgColor='#778DA9' minH='92vh'>
       <Title title='Movie App' />
-
       <Chakra.Flex m='2px 9px' justifyContent='center'>
         <Chakra.InputGroup w='20%'>
           <Chakra.Input

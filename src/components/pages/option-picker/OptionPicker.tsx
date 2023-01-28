@@ -94,8 +94,8 @@ const OptionPicker: React.FC = () => {
     }
   };
 
-  const handleSubmit = (key: string) => {
-    if (key === 'Enter') {
+  const handleSubmit = (keyCode: number) => {
+    if (keyCode === 13) {
       const textArea = document.getElementById(
         'text-area'
       )! as HTMLTextAreaElement;
@@ -163,7 +163,7 @@ const OptionPicker: React.FC = () => {
           id='text-area'
           mt='1rem'
           placeholder='Seperate, options, with, commas'
-          onKeyDown={(e: React.KeyboardEvent) => handleSubmit(e.code)}
+          onKeyDown={(e: React.KeyboardEvent) => handleSubmit(e.keyCode)}
           onChange={(e: React.BaseSyntheticEvent) => createTags(e.target.value)}
         />
         <Chakra.Input display='none' type='submit' />

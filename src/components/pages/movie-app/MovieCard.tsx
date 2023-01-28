@@ -156,7 +156,10 @@ const MovieCard: React.FC<MovieProps> = ({ movie, idx }) => {
                 >
                   <AnimatePresence>
                     <Chakra.Button
-                      _hover={{ backgroundColor: 'transparent' }}
+                      _hover={{
+                        backgroundColor: 'transparent',
+                        transform: 'scale(1.1)'
+                      }}
                       cursor='pointer'
                       variant='ghost'
                       colorScheme='blue'

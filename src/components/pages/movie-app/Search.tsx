@@ -46,7 +46,7 @@ const Search: React.FC<SearchProps> = ({
   };
 
   return (
-    <Chakra.Flex m='2px 9px' justifyContent='center'>
+    <Chakra.Flex m='2px 9px' justifyContent='center' minW='80vw' mb='2rem'>
       <Chakra.InputGroup w='20%'>
         <Chakra.Input
           placeholder='Search'

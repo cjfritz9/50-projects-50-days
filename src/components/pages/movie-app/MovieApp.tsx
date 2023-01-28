@@ -35,9 +35,13 @@ const MovieApp: React.FC = () => {
         flexDir='column'
         alignItems='center'
       >
-        <Chakra.Heading size='2xl' my='2rem'>
-          Internal Server Error
-        </Chakra.Heading>
+        <Title title='Internal Server Error' font='Unbounded' color='white' />
+        <Search
+          setLoading={setLoading}
+          setFetchError={setFetchError}
+          fetchMovies={fetchMovies}
+          setMovies={setMovies}
+        />
         <Chakra.Button
           _active={{ transform: 'scale(0.98)' }}
           cursor='pointer'
@@ -61,9 +65,13 @@ const MovieApp: React.FC = () => {
         flexDir='column'
         alignItems='center'
       >
-        <Chakra.Heading size='2xl' my='2rem'>
-          No Results
-        </Chakra.Heading>
+        <Title title='No Results' font='Unbounded' color='white' />
+        <Search
+          setLoading={setLoading}
+          setFetchError={setFetchError}
+          fetchMovies={fetchMovies}
+          setMovies={setMovies}
+        />
         <Chakra.Button
           _active={{ transform: 'scale(0.98)' }}
           cursor='pointer'
@@ -80,7 +88,12 @@ const MovieApp: React.FC = () => {
   return (
     <Chakra.Box bgColor='#778DA9' minH='92vh'>
       <Title title='Movie App' font='Unbounded' color='white' />
-      <Search setLoading={setLoading} setFetchError={setFetchError} fetchMovies={fetchMovies} setMovies={setMovies} />
+      <Search
+        setLoading={setLoading}
+        setFetchError={setFetchError}
+        fetchMovies={fetchMovies}
+        setMovies={setMovies}
+      />
       <Chakra.Flex flexWrap='wrap'>
         {movies && !loading ? (
           movies.map((movie: Movie, idx) => {

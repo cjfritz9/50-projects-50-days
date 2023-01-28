@@ -7,17 +7,17 @@ import Movie from './models';
 
 interface MovieProps {
   movie: Movie;
+  idx: number;
 }
 
-const MovieCard: React.FC<MovieProps> = ({ movie }) => {
+const MovieCard: React.FC<MovieProps> = ({ movie, idx }) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const firstRenderRef = React.useRef(true);
 
   if (isHovered) {
-    console.log(movie);
     firstRenderRef.current = false;
   }
-
+  console.log(idx);
   const trimOverview = (text: string) => {
     return text.slice(0, 285) + '...';
   };
@@ -106,7 +106,7 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
                       cursor='default'
                       mr='2px'
                     >
-                      {movie.release_date.slice(0, 4)}
+                      {movie.release_date && movie.release_date.slice(0, 4)}
                     </Chakra.Text>
                     <Chakra.Flex alignItems='center'>
                       <Chakra.Text
@@ -137,7 +137,7 @@ const MovieCard: React.FC<MovieProps> = ({ movie }) => {
                       layout
                       cursor='default'
                     >
-                      {movie.overview.length >= 288
+                      {movie.overview.length >= 288 && movie.overview.length > 0
                         ? trimOverview(movie.overview)
                         : movie.overview}
                     </Chakra.Text>

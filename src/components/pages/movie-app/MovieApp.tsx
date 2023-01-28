@@ -86,7 +86,7 @@ const MovieApp: React.FC = () => {
   }
 
   return (
-    <Chakra.Box bgColor='#778DA9' minH='92vh'>
+    <Chakra.Box bgColor='#778DA9' minH='92vh' w='100vw' p='0.5rem'>
       <Title title='Movie App' font='Unbounded' color='white' />
       <Search
         setLoading={setLoading}
@@ -94,7 +94,7 @@ const MovieApp: React.FC = () => {
         fetchMovies={fetchMovies}
         setMovies={setMovies}
       />
-      <Chakra.Flex flexWrap='wrap'>
+      <Chakra.Flex flexWrap='wrap' justifyContent='center'>
         {movies && !loading ? (
           movies.map((movie: Movie, idx) => {
             return <MovieCard movie={movie} idx={idx} />;

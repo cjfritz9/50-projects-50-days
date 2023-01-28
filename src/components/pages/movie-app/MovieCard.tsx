@@ -32,7 +32,7 @@ const MovieCard: React.FC<MovieProps> = ({ movie, idx }) => {
           variant='elevated'
           bgColor='#E0E1DD'
           m='2rem'
-          w='sm'
+          w='22rem'
           h='19rem'
           overflow='hidden'
         >

@@ -6,7 +6,7 @@ const Title: React.FC<TitleProps> = ({
   title,
   color = 'black',
   font = 'Poppins',
-  shadow = `0px 0px 0px ${color}`
+  shadow = `0px 0px 0px gray ${color}`
 }) => {
   return (
     <Chakra.Heading

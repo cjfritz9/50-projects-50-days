@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   const [isNextDisabled, setIsNextDisabled] = React.useState<boolean>(false);
   const navigate = useNavigate();
 
-  const numOfComponents = 18;
+  const numOfComponents = 19;
 
   const navHandler = (button: string): void => {
     const url = window.location.href;

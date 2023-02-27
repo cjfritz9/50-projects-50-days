@@ -9,7 +9,7 @@ const BlurryLoading: React.FC = () => {
 
   React.useEffect(() => {
     const blurring = (): void => {
-      if (window.location.href.slice(-1) != '2') {
+      if (window.location.href.slice(-1) !== '1') {
         return clearInterval(interval);
       }
       let loadingText = document.getElementById('load-text')! as HTMLDivElement;

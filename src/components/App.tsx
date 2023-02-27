@@ -19,6 +19,7 @@ import IncrementalCounter from './pages/incremental-counter/IncrementalCounter';
 import WaterTracker from './pages/water-tracker/WaterTracker';
 import MovieApp from './pages/movie-app/MovieApp';
 import BackgroundSlider from './pages/background-slider/BackgroundSlider';
+import AnalogClock from './pages/analog-clock/AnalogClock';
 
 const App: React.FC = () => {
   const navigate = Router.useNavigate();
@@ -33,10 +34,11 @@ const App: React.FC = () => {
     <div id='App' className='App'>
       <Header />
       <Router.Routes>
-        <Router.Route path='/components/1' element={<AnimatedForm />} />
-        <Router.Route path='/components/2' element={<BlurryLoading />} />
-        <Router.Route path='/components/3' element={<DadJokes />} />
-        <Router.Route path='/components/4' element={<Cards />} />
+        <Router.Route path='/' />
+        <Router.Route path='/components/1' element={<BlurryLoading />} />
+        <Router.Route path='/components/2' element={<Cards />} />
+        <Router.Route path='/components/3' element={<AnimatedForm />} />
+        <Router.Route path='/components/4' element={<DadJokes />} />
         <Router.Route path='/components/5' element={<Search />} />
         <Router.Route path='/components/6' element={<ProgressSteps />} />
         <Router.Route path='/components/7' element={<RotatingNavigation />} />
@@ -51,6 +53,7 @@ const App: React.FC = () => {
         <Router.Route path='/components/16' element={<WaterTracker />} />
         <Router.Route path='/components/17' element={<MovieApp />} />
         <Router.Route path='/components/18' element={<BackgroundSlider />} />
+        <Router.Route path='/components/19' element={<AnalogClock />} />
       </Router.Routes>
     </div>
   );
